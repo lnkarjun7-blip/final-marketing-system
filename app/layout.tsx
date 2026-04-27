@@ -1,22 +1,21 @@
-import type { Metadata } from 'next'
-import './globals.css'
+import './globals.css';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Strategic Design & Deployment',
-  description: 'High-Conversion Sales Systems',
-}
+  title: 'My Funnel',
+  description: 'High-conversion sales system',
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
-      <head>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
-      </head>
-      <body>{children}</body>
+      <body className="bg-[#050505] text-white selection:bg-purple-500/30 overflow-x-hidden antialiased">
+        {children}
+      </body>
     </html>
-  )
+  );
 }
